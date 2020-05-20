@@ -50,12 +50,12 @@ body {
 }
 
 a {
-    color: #691375;
+    color: #1DA1F2;
     text-decoration: none;
     word-break: break-word;
 }
 a:hover {
-    border-bottom: 2px solid #691375;
+    border-bottom: 2px solid #1DA1F2;
     opacity: 0.8;
 }
 
@@ -69,13 +69,13 @@ html,button,input,select,textarea {
 }
 
 ::-moz-selection {
-    background: #691375;
+    background: #1DA1F2;
     text-shadow: none;
     color: #fff;
 }
 
 ::selection {
-    background: #691375;
+    background: #1DA1F2;
     text-shadow: none;
     color: #fff;
 }
@@ -155,7 +155,7 @@ blockquote {
     font-size: 1.4rem;
     font-family: Georgia,bitstream charter,serif;
     border-left: 3px solid;
-    border-color: #691375;
+    border-color: #1DA1F2;
     padding-left: 20px;
 }
 
@@ -405,7 +405,7 @@ nav.social a:hover {
 }
 
 .post .draft-label {
-    color: #691375;
+    color: #1DA1F2;
     text-decoration: none;
     padding: 2px 4px;
     border-radius: 4px;
@@ -415,10 +415,10 @@ nav.social a:hover {
 
 .post .tags a {
     display: inline-block;
-    border: 1px solid #691375;
+    border: 1px solid #1DA1F2;
     border-radius: 3px;
     padding: 0px 6px;
-    color: #691375;
+    color: #1DA1F2;
     line-height: 20px;
     font-size: 0.85em;
     text-decoration: none;
