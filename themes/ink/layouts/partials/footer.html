@@ -1,0 +1,22 @@
+<div class="footer wrapper">
+	<nav class="nav social">
+		<ul class="flat">
+			{{- range $index, $key := .Site.Params.Social -}}
+				{{- if eq $key.icon "rss" -}}
+					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i class="fas fa-{{ $key.icon }}"></i></a></li>
+				{{- else -}}
+					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i class="fab fa-{{ $key.icon }}"></i></a></li>
+				{{- end -}}
+			{{- end -}}
+		</ul>
+	</nav>
+
+	<nav class="nav">
+		<div><span class="copyleft">&copy;</span> 2020 {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
+	</nav>
+</div>
+
+{{ template "_internal/google_analytics_async.html" . }}
+{{- with .Site.Params.Social -}}
+<script>feather.replace()</script>
+{{- end -}}

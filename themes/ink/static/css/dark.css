@@ -1,0 +1,79 @@
+body {
+	color: #ddd;
+	background-color: #111216;
+}
+
+/* Highlighting */
+::-moz-selection {
+	background: #2b99dd;
+	color: #fff;
+    text-shadow: none
+}
+
+/* Highlighting */
+::selection {
+	background: #2b99dd;
+	color: #fff;
+    text-shadow: none
+}
+
+hr {
+    border-color: #333;
+}
+
+blockquote {
+	border-color: #ddd;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #ddd;
+}
+
+a,a:hover {
+	color: #1DA1F2;
+	text-decoration: none;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.site-description a,
+.site-description a:hover {
+	color: #ddd;
+	text-decoration: underline;
+}
+
+a:hover {
+	border-bottom: 2px solid #1A80C0;
+	opacity: 0.8;
+}
+
+.post-tags .tags a {
+    border: 1px solid #ddd;
+	color: #ddd;
+}
+
+.site-title a {
+	color: #ddd;
+	text-decoration: none !important;
+}
+
+.header nav,
+.footer {
+	border-color: #333;
+}
+
+.highlight {
+	background-color: #333;
+}
+
+.post .draft-label {
+	color: #1A80C0;
+    background-color: #ddd;
+}
+
+.post .tags a {
+	border: 1px solid #1A80C0;
+	color: #1A80C0;
+}

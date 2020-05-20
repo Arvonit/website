@@ -1,0 +1,66 @@
+baseURL = "https://arvind.dev/"
+languageCode = "en-us"
+title = "arvind.dev"
+theme = "ink"
+
+copyright = "arvind.dev"
+
+[params]
+    subtitle = "a place to share my thoughts with the world"
+
+	# Optional 64x64 avatar image.
+	# avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+	avatar = "/img/CartoonProfile.png"
+
+	# Content types to disable Disqus on.
+	# disableDisqusTypes = ["page"]
+	
+	featherIconsCDN = true
+
+	mode = "auto" # "dark" or "auto"
+	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+
+
+# Navbar
+[[menu.main]]
+name = "home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "about"
+url = "/about"
+weight = 4
+
+# Social
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/SkinnyBonesArv"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/SkinnyBonesArv"
+
+[[params.social]]
+name = "Instagram"
+icon = "instagram"
+url = "https://instagram.com/skinnybonesarv"
+
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
