@@ -1,3 +1,3 @@
 # arvind.dev
 
-My personal website, located at [arvind.dev](arvind.dev).
+My personal website, located at [arvind.dev](https://arvind.dev).
