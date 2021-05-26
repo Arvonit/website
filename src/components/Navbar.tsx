@@ -1,23 +1,30 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-function Navbar() {
+interface Props {
+  title: string;
+  currentPage?: string;
+}
+
+export default function Navbar({ title, currentPage = 'Home' }: Props) {
+  function addSelectionCSS(desiredLocation: string, currentLocation: string): string {
+    return currentLocation == desiredLocation ? 'font-semibold' : 'hover:text-blue-600';
+  }
+
   return (
     <nav className="flex justify-between mb-12">
-      <h3 className="text-3xl font-bold">Arvind</h3>
+      <h3 className="text-3xl font-bold">{title}</h3>
       <ul className="flex space-x-4 justify-end text-lg font-normal">
         <Link to="/">
-          <li className="hover:text-blue-600">Home</li>
+          <li className={addSelectionCSS('Home', currentPage)}>Home</li>
         </Link>
         <Link to="/blog/">
-          <li className="hover:text-blue-600">Blog</li>
+          <li className={addSelectionCSS('Blog', currentPage)}>Blog</li>
         </Link>
         <Link to="/about/">
-          <li className="hover:text-blue-600">About</li>
+          <li className={addSelectionCSS('About', currentPage)}>About</li>
         </Link>
       </ul>
     </nav>
   );
 }
-
-export default Navbar;

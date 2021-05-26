@@ -1,10 +1,11 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import BlogPostCard from '../components/BlogPostCard';
-import Hero from '../components/Hero';
+import BlogPostList from '../components/BlogPostList';
 import Layout from '../components/Layout';
+import { graphql, Link } from 'gatsby';
 
-function Home() {
+export default function Home({ data }) {
+  const posts = data.allMdx.nodes;
+
   return (
     <Layout>
       <div className="mb-12">
@@ -12,22 +13,37 @@ function Home() {
         <p className="text-gray-700">
           I'm Arvind — a student, programmer, and creator. Whenever I have time, I try to write here
           about tech, programming, and productivity.
-          {/* On my website, I write about
-          different topics, including tech, helpful life advice, and history. */}
         </p>
       </div>
       <div className="space-y-8">
-        <h2 className="text-4xl font-semibold mb-8">Recent Posts</h2>
-        <BlogPostCard />
-        <BlogPostCard />
-        <Link to="/blog">
-          <button className="mt-4 w-40 py-2 rounded-xl font-semibold text-white bg-blue-700 hover:bg-blue-600">
-            View All Posts -&gt;
-          </button>
-        </Link>
+        <h2 className="text-4xl font-semibold">Recent Posts</h2>
+        <BlogPostList posts={posts} />
+        {posts.length > 0 && (
+          <Link to="/blog">
+            <button className="mt-4 w-40 py-2 rounded-xl font-semibold text-white bg-blue-700 hover:bg-blue-600">
+              View all posts -&gt;
+            </button>
+          </Link>
+        )}
       </div>
     </Layout>
   );
 }
 
-export default Home;
+// TODO: Add query limit of 3 posts
+export const pageQuery = graphql`
+  query {
+    allMdx(limit: 3, sort: { fields: frontmatter___date, order: DESC }) {
+      nodes {
+        excerpt(pruneLength: 200)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`;

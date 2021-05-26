@@ -1,18 +1,38 @@
 import React from 'react';
-import BlogPostCard from '../components/BlogPostCard';
+import BlogPostList from '../components/BlogPostList';
 import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
 
-function Blog() {
+interface Props {
+  data: any;
+}
+
+export default function Blog({ data }: Props) {
+  const posts = data.allMdx.nodes;
+
   return (
-    <Layout>
+    <Layout currentPage="Blog">
       <div className="space-y-8">
         <h2 className="text-4xl font-semibold mb-8">Blog</h2>
-        <BlogPostCard />
-        <BlogPostCard />
-        <BlogPostCard />
+        <BlogPostList posts={posts} />
       </div>
     </Layout>
   );
 }
 
-export default Blog;
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      nodes {
+        excerpt(pruneLength: 200)
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`;

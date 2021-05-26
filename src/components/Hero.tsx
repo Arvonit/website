@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Hero() {
+export default function Hero() {
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Hi!</h1>
@@ -13,5 +13,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;
