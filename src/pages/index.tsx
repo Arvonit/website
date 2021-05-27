@@ -3,7 +3,11 @@ import BlogPostList from '../components/BlogPostList';
 import Layout from '../components/Layout';
 import { graphql, Link } from 'gatsby';
 
-export default function Home({ data }) {
+interface Props {
+  data: any;
+}
+
+export default function Home({ data }: Props) {
   const posts = data.allMdx.nodes;
 
   return (
@@ -37,8 +41,8 @@ export const pageQuery = graphql`
       nodes {
         excerpt(pruneLength: 200)
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
+          date(formatString: "MMMM DD, YYYY")
         }
         fields {
           slug

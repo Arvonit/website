@@ -14,6 +14,14 @@ module.exports = {
               '&:hover': {
                 color: theme('colors.blue.600')
               }
+            },
+            h1: {
+              color: theme('colors.gray.900'),
+              fontWeight: '600'
+            },
+            h2: {
+              color: theme('colors.gray.900'),
+              fontWeight: '600'
             }
           }
         }
