@@ -19,15 +19,15 @@ export default function Navbar({ title, currentPage = 'Home' }: Props) {
     <nav className="flex justify-between mb-12 items-center">
       <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
       <ul className="flex space-x-4 justify-end text-md md:text-lg">
-        <Link to="/">
-          <li className={addSelectionCSS('Home', currentPage)}>Home</li>
-        </Link>
-        <Link to="/blog/">
-          <li className={addSelectionCSS('Blog', currentPage)}>Blog</li>
-        </Link>
-        <Link to="/about/">
-          <li className={addSelectionCSS('About', currentPage)}>About</li>
-        </Link>
+        <li className={addSelectionCSS('Home', currentPage)}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={addSelectionCSS('Blog', currentPage)}>
+          <Link to="/blog/">Blog</Link>
+        </li>
+        <li className={addSelectionCSS('About', currentPage)}>
+          <Link to="/about/">About</Link>
+        </li>
       </ul>
     </nav>
   );
