@@ -15,8 +15,8 @@ export default function Home({ data }: Props) {
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Hey!</h2>
         <p className="text-gray-700">
-          I'm Arvind — a student, programmer, and creator. Whenever I have time, I try to write here
-          about tech, programming, and productivity.
+          I'm Arvind — a student and programmer. Whenever I have time, I try to write here about
+          tech, programming, and productivity.
         </p>
       </div>
       <div className="space-y-8">
