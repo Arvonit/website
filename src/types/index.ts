@@ -14,4 +14,5 @@ export interface Post {
   };
   excerpt?: string;
   body?: string;
+  id: string;
 }

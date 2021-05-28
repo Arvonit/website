@@ -6,9 +6,7 @@ exports.onCreateNode = ({ actions, node, getNode }) => {
 
   // Add blog/ prefix to slug
   if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode });
-    // TODO: I may be able to remove the basePath entry
-    const slug = createFilePath({ node, getNode, basePath: './content/blog' });
+    const slug = createFilePath({ node, getNode });
 
     createNodeField({
       node,
@@ -59,7 +57,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type SiteSiteMetadata {
       title: String
       description: String
-      siteURL: String
+      siteUrl: String
       author: Author
     }
 

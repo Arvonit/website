@@ -12,7 +12,7 @@ export default function Layout({ children, currentPage = 'Home' }: Props) {
   const metadata = useSiteMetadata();
 
   return (
-    <div className="container mx-auto my-8 max-w-4xl">
+    <div className="max-w-4xl mx-auto px-6 lg:px-0 my-8">
       <Metadata
         title={metadata.title}
         author={metadata.author.name}

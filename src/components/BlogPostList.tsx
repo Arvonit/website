@@ -18,7 +18,7 @@ export default function BlogPostList({ posts }: Props) {
   return (
     <>
       {posts.map(post => (
-        <BlogPostCell post={post} />
+        <BlogPostCell post={post} key={post.id} />
       ))}
     </>
   );

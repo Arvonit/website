@@ -16,8 +16,7 @@ export default function BlogPost({ data }: Props) {
 
   return (
     <Layout currentPage={post.frontmatter.title}>
-      <h1 className="text-4xl font-semibold mb-4">{post.frontmatter.title}</h1>
-      {/* TODO: Convert to date */}
+      <h1 className="text-3xl md:text-4xl font-semibold mb-4">{post.frontmatter.title}</h1>
       <div className="text-gray-600 mb-6">
         <time dateTime={date}>{post.frontmatter.date}</time>
       </div>

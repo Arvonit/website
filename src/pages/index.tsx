@@ -13,14 +13,14 @@ export default function Home({ data }: Props) {
   return (
     <Layout>
       <div className="mb-12">
-        <h2 className="text-4xl font-semibold mb-4">Hey!</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Hey!</h2>
         <p className="text-gray-700">
           I'm Arvind — a student, programmer, and creator. Whenever I have time, I try to write here
           about tech, programming, and productivity.
         </p>
       </div>
       <div className="space-y-8">
-        <h2 className="text-4xl font-semibold">Recent Posts</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold">Recent Posts</h2>
         <BlogPostList posts={posts} />
         {posts.length > 0 && (
           <Link to="/blog">
@@ -34,11 +34,11 @@ export default function Home({ data }: Props) {
   );
 }
 
-// TODO: Add query limit of 3 posts
 export const pageQuery = graphql`
   query {
     allMdx(limit: 3, sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
+        id
         excerpt(pruneLength: 200)
         frontmatter {
           title

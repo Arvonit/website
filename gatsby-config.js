@@ -36,8 +36,8 @@ module.exports = {
               siteMetadata {
                 title
                 description
-                siteURL
-                site_url: siteURL
+                siteUrl
+                site_url: siteUrl
               }
             }
           }
@@ -49,8 +49,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteURL + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteURL + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }]
                 });
               });
@@ -85,6 +85,12 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
@@ -94,7 +100,7 @@ module.exports = {
   siteMetadata: {
     title: 'Arvind',
     description: 'My personal website and blog.',
-    siteURL: 'https://www.arvind.dev',
+    siteUrl: 'https://www.arvind.dev',
     author: {
       name: 'Arvind',
       summary: 'A student, programmer, and creator'

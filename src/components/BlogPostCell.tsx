@@ -13,7 +13,7 @@ export default function BlogPostCell({ post }: Props) {
   return (
     <div>
       <Link to={post.fields.slug}>
-        <h3 className="text-2xl no-underline font-semibold mb-1 hover:text-blue-600">
+        <h3 className="text-xl md:text-2xl no-underline font-semibold mb-1 hover:text-blue-600">
           {post.frontmatter.title}
         </h3>
       </Link>
