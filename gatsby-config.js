@@ -15,19 +15,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1200
-            }
-          }
-        ]
-      }
-    },
-    {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `
@@ -131,11 +118,25 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 900
+            }
+          }
+        ]
+      }
+    },
+    'gatsby-remark-images',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp'
+    'gatsby-plugin-sharp'
   ],
   siteMetadata: {
     title: 'Arvind',
