@@ -74,6 +74,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String
       date: Date @dateformat
+      dateModified: Date
     }
 
     type Fields {

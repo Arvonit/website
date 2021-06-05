@@ -86,6 +86,46 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          query {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+            allMdx {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date
+                  dateModified
+                }
+              }
+            }
+          }
+        `,
+        resolvePages: data => {
+          const pages = data.allSitePage.nodes;
+          const posts = data.allMdx.nodes;
+          return pages;
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path
+          };
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         policy: [{ userAgent: '*', allow: '/' }]
