@@ -1,32 +1,17 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
-interface Props {
-  title: string;
-  currentPage?: string;
-}
-
-export default function Navbar({ title, currentPage = 'Home' }: Props) {
-  function addSelectionCSS(desiredLocation: string, currentLocation: string): string {
-    if (currentLocation === 'Home' || currentLocation === 'Blog' || currentLocation === 'About') {
-      return currentLocation === desiredLocation ? 'font-semibold' : 'hover:text-blue-600';
-    } else {
-      return desiredLocation === 'Blog' ? 'font-semibold' : 'hover:text-blue-600';
-    }
-  }
-
+export default function Navbar() {
   return (
-    <nav className="flex justify-between mb-12 items-center">
-      <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
-      <ul className="flex space-x-4 justify-end text-md md:text-lg">
-        <li className={addSelectionCSS('Home', currentPage)}>
-          <Link to="/">Home</Link>
+    <nav className="flex justify-between items-center py-6">
+      <h1 className="text-xl font-bold">
+        <Link href="/">Arvind Kasiliya</Link>
+      </h1>
+      <ul className="text-md flex space-x-6 justify-end font-semibold">
+        <li>
+          <Link href="/blog">Blog</Link>
         </li>
-        <li className={addSelectionCSS('Blog', currentPage)}>
-          <Link to="/blog/">Blog</Link>
-        </li>
-        <li className={addSelectionCSS('About', currentPage)}>
-          <Link to="/about/">About</Link>
+        <li>
+          <Link href="/portfolio">Portfolio</Link>
         </li>
       </ul>
     </nav>

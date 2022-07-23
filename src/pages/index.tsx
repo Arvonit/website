@@ -1,30 +1,34 @@
-import React from 'react';
 import BlogPostList from '../components/BlogPostList';
 import Layout from '../components/Layout';
-import { graphql, Link } from 'gatsby';
+import { getRecentPosts } from '../util/fetch';
+import Post from '../types/post';
+import Link from 'next/link';
 
 interface Props {
-  data: any;
+  recentPosts: Post[];
 }
 
-export default function Home({ data }: Props) {
-  const posts = data.allMdx.nodes;
-
+export default function Home({ recentPosts }: Props) {
   return (
     <Layout>
-      <div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Hey!</h2>
-        <p className="text-gray-700">
-          I'm Arvind — a student and programmer. Whenever I have time, I try to write here about
-          tech, programming, and productivity.
+      {/* Hero */}
+      <div className="pt-6">
+        <h2 className="text-xl md:text-2xl font-semibold">Hey!</h2>
+        <p className="text-gray-700 mt-4">
+          I&apos;m Arvind Kasiliya. I&apos;m a student at the University of Connecticut studying
+          Computer Science.
+          {/* Welcome to my home on the internet. Below, you can view some of the
+          projects I&apos;ve worked on. When I have time, I like to write about various topics that
+          interest me. */}
         </p>
       </div>
-      <div className="space-y-8">
-        <h2 className="text-3xl md:text-4xl font-semibold">Recent Posts</h2>
-        <BlogPostList posts={posts} />
-        {posts.length > 0 && (
-          <Link to="/blog">
-            <button className="mt-4 w-40 py-2 rounded-xl font-semibold text-white bg-blue-700 hover:bg-blue-600">
+      {/* Recent Posts */}
+      <div className="pt-12">
+        <h2 className="text-xl md:text-2xl font-semibold mb-4">Recent Posts</h2>
+        <BlogPostList posts={recentPosts} />
+        {recentPosts.length > 0 && (
+          <Link href="/blog">
+            <button className="w-40 py-2 rounded-xl font-semibold text-white bg-blue-700 hover:bg-blue-600">
               View all posts -&gt;
             </button>
           </Link>
@@ -34,20 +38,8 @@ export default function Home({ data }: Props) {
   );
 }
 
-export const pageQuery = graphql`
-  query {
-    allMdx(limit: 3, sort: { fields: frontmatter___date, order: DESC }) {
-      nodes {
-        id
-        excerpt(pruneLength: 200)
-        frontmatter {
-          title
-          date(formatString: "MMMM DD, YYYY")
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-`;
+export async function getStaticProps() {
+  const recentPosts = getRecentPosts();
+
+  return { props: { recentPosts } };
+}
