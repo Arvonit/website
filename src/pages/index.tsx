@@ -54,7 +54,7 @@ export default function Home() {
           <div className="basis-1/3 w-1/2 mb-8 md:mb-0 order-1 md:order-2">
             <Image
               src={me}
-              alt="A picture of young me typing on a keyboard"
+              alt="Young me messing with a keyboard"
               className="rounded-lg"
               placeholder="blur"
             />
@@ -174,7 +174,7 @@ export default function Home() {
               <a> */}
             <Image
               src={commentarium}
-              alt="commentarium"
+              alt="Commentarium"
               placeholder="blur"
               className="rounded-sm"
             />
