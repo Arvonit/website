@@ -7,9 +7,9 @@ export default function Navbar() {
         <Link href="/">Arvind Kasiliya</Link>
       </h1>
       <ul className="text-md flex space-x-6 justify-end font-semibold">
-        <li>
+        {/* <li>
           <Link href="/blog">Blog</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/portfolio">Portfolio</Link>
         </li>

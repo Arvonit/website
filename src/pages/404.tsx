@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-// TODO: Fix
 export default function PageNotFound() {
   return (
     <div className="flex h-screen">

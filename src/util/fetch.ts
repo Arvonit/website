@@ -17,6 +17,10 @@ export function getRecentPosts(): Post[] {
   return getPosts().slice(0, 5);
 }
 
+export function getNumPosts(): number {
+  return getPostSlugs().length;
+}
+
 export function getPostSlugs(): string[] {
   return fs
     .readdirSync(postsDirectory, { withFileTypes: true })
