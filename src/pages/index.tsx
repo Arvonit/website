@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import rubik from '../../public/projects/rubik.png';
 import irc from '../../public/projects/irc.png';
 import commentarium from '../../public/projects/commentarium.png';
@@ -22,31 +22,40 @@ export default function Home() {
               </p>
               <p>
                 I&apos;m currently working as an Undergraduate Research Assistant at the{' '}
-                <span className="text-blue-600 no-underline hover:underline">
-                  <Link href="https://infothreats.cse.uconn.edu">RIET Lab</Link>
-                </span>{' '}
+                <Link
+                  href="https://infothreats.cse.uconn.edu"
+                  className="text-blue-600 no-underline hover:underline"
+                >
+                  RIET Lab
+                </Link>{' '}
                 under Dr. Shiri Dori-Hacohen and on the{' '}
-                <span className="text-blue-600 no-underline hover:underline">
-                  <Link href="https://eprint.iacr.org/2021/818.pdf">CTng</Link>
-                </span>{' '}
-                project under Dr. Amir Herzberg. My research interests include computer security,
-                operating systems, and information retrieval. Going forward, I&apos;m looking for a
-                software engineering internship for the upcoming summer.
+                <Link
+                  href="https://eprint.iacr.org/2021/818.pdf"
+                  className="text-blue-600 no-underline hover:underline"
+                >
+                  CTng project
+                </Link>{' '}
+                under Dr. Amir Herzberg. My research interests include computer security, operating
+                systems, and information retrieval. Going forward, I&apos;m looking for a software
+                engineering internship for the upcoming summer.
               </p>
 
               <p>My email address is arvind [at] kasiliya [dot] com.</p>
 
               {/* Links */}
               <div className="text-blue-600 flex flex-row space-x-4">
-                <p className="no-underline hover:underline">
-                  <Link href="https://www.linkedin.com/in/arvindkasiliya">LinkedIn</Link>
-                </p>
-                <p className="no-underline hover:underline">
-                  <Link href="https://github.com/Arvonit">GitHub</Link>
-                </p>
-                <p className="no-underline hover:underline">
-                  <Link href="/resume.pdf">Resume</Link>
-                </p>
+                <Link
+                  href="https://www.linkedin.com/in/arvindkasiliya"
+                  className="no-underline hover:underline"
+                >
+                  LinkedIn
+                </Link>
+                <Link href="https://github.com/Arvonit" className="no-underline hover:underline">
+                  GitHub
+                </Link>
+                <Link href="/resume.pdf" className="no-underline hover:underline">
+                  Resume
+                </Link>
               </div>
             </div>
           </div>
@@ -72,16 +81,14 @@ export default function Home() {
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
           {/* Picture */}
           <div className="basis-1/3 w-1/2">
-            {/* <Link href="https://rubik.kasiliya.com">
-              <a> */}
+            {/* <Link href="https://rubik.kasiliya.com"> */}
             <Image
               src={rubik}
               alt="Rubik's cube solver"
               placeholder="blur"
               className="rounded-sm"
             />
-            {/* </a>
-            </Link> */}
+            {/* </Link> */}
           </div>
 
           {/* Description */}
@@ -95,11 +102,12 @@ export default function Home() {
               </p>
               <p>
                 Under the hood, this solver uses a custom implementation of{' '}
-                <span className="text-blue-600 no-underline hover:underline">
-                  <Link href="http://kociemba.org/cube.htm">
-                    Herbert Kociemba&apos;s Two-Phase algorithm
-                  </Link>
-                </span>
+                <Link
+                  href="http://kociemba.org/cube.htm"
+                  className="text-blue-600 no-underline hover:underline"
+                >
+                  Herbert Kociemba&apos;s Two-Phase algorithm
+                </Link>
                 , written in Python. The frontend, written in React, calls an endpoint, written
                 using FastAPI, to solve the cube and receive the necessary moves to solve.
               </p>
@@ -108,20 +116,26 @@ export default function Home() {
               <div className="flex flex-row space-x-4">
                 <p>
                   [
-                  <span className="text-blue-600 no-underline hover:underline">
-                    <code>
-                      <Link href="https://github.com/Arvonit/rubik">Code</Link>
-                    </code>
-                  </span>
+                  <code>
+                    <Link
+                      href="https://github.com/Arvonit/rubik"
+                      className="text-blue-600 no-underline hover:underline"
+                    >
+                      Code
+                    </Link>
+                  </code>
                   ]
                 </p>
                 <p>
                   [
-                  <span className="text-blue-600 no-underline hover:underline">
-                    <code>
-                      <Link href="https://rubik.kasiliya.com">Website</Link>
-                    </code>
-                  </span>
+                  <code>
+                    <Link
+                      href="https://rubik.kasiliya.com"
+                      className="text-blue-600 no-underline hover:underline"
+                    >
+                      Website
+                    </Link>
+                  </code>
                   ]
                 </p>
               </div>
@@ -155,11 +169,14 @@ export default function Home() {
               {/* Code Link */}
               <p>
                 [
-                <span className="text-blue-600 no-underline hover:underline">
-                  <code>
-                    <Link href="https://github.com/Arvonit/chat">Code</Link>
-                  </code>
-                </span>
+                <code>
+                  <Link
+                    href="https://github.com/Arvonit/chat"
+                    className="text-blue-600 no-underline hover:underline"
+                  >
+                    Code
+                  </Link>
+                </code>
                 ]
               </p>
             </div>
@@ -196,11 +213,14 @@ export default function Home() {
               {/* Code Link */}
               <p>
                 [
-                <span className="text-blue-600 no-underline hover:underline">
-                  <code>
-                    <Link href="https://github.com/Arvonit/Commentarium">Code</Link>
-                  </code>
-                </span>
+                <code>
+                  <Link
+                    href="https://github.com/Arvonit/Commentarium"
+                    className="text-blue-600 no-underline hover:underline"
+                  >
+                    Code
+                  </Link>
+                </code>
                 ]
               </p>
             </div>

@@ -2,7 +2,7 @@ import Layout from '../../components/Layout';
 import Post from '../../types/post';
 import { getPostFromSlug, getPostSlugs } from '../../util/fetch';
 import { getLongFormDate } from '../../util/date';
-import Image, { ImageProps } from 'next/image';
+import Image, { ImageProps } from 'next/legacy/image';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
@@ -30,6 +30,7 @@ export default function BlogPost({ post }: Props) {
             className="prose max-w-none"
             // dangerouslySetInnerHTML={{ __html: post.body }}
           >
+            {/* TODO: Upgrade to NextJS 13 image */}
             <MDXRemote
               {...source}
               components={{
