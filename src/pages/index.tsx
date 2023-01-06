@@ -156,7 +156,7 @@ export default function Home() {
 
           {/* Description */}
           <div className="basis-2/3">
-            <h4 className="text-lg font-medium mb-2">IRC Client/Server</h4>
+            <h4 className="text-lg font-medium mb-2">IRC Chat Client/Server</h4>
             <div className="space-y-2 text-gray-700">
               <p>
                 A basic multi-threaded implementation of an IRC client and server, both written in
@@ -171,7 +171,7 @@ export default function Home() {
                 [
                 <code>
                   <Link
-                    href="https://github.com/Arvonit/chat"
+                    href="https://github.com/Arvonit/irc"
                     className="text-blue-600 no-underline hover:underline"
                   >
                     Code
