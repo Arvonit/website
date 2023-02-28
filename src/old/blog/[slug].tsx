@@ -34,7 +34,7 @@ export default function BlogPost({ post }: Props) {
             <MDXRemote
               {...source}
               components={{
-                img: props => (
+                img: (props) => (
                   // height and width are part of the props, so they get automatically passed here with {...props}
                   // eslint-disable-next-line jsx-a11y/alt-text
                   <Image {...(props as ImageProps)} layout="responsive" loading="lazy" />
@@ -72,7 +72,7 @@ export async function getStaticPaths() {
   const slugs = getPostSlugs();
 
   return {
-    paths: slugs.map(slug => {
+    paths: slugs.map((slug) => {
       return {
         params: {
           slug

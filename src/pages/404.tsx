@@ -7,7 +7,6 @@ export default function PageNotFound() {
       <Head>
         <title>Page not found - Arvind Kasiliya</title>
         <meta name="description" content="My homepage on the internet" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="m-auto text-center">
         <h2 className="text-5xl md:text-6xl font-semibold mb-2">404</h2>
