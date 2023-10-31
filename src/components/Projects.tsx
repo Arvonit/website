@@ -108,26 +108,26 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Commentarium */}
+      {/* Schreiber */}
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           {/* <Link href="https://github.com/Arvonit/Commentarium">
               <a> */}
-          <Image src={commentarium} alt="Commentarium" placeholder="blur" className="rounded-sm" />
+          <Image src={commentarium} alt="Schreiber" placeholder="blur" className="rounded-sm" />
           {/* </a>
             </Link> */}
         </div>
 
         {/* Description */}
         <div className="basis-2/3">
-          <h4 className="text-lg font-medium mb-2">Commentarium</h4>
+          <h4 className="text-lg font-medium mb-2">Schreiber</h4>
           <div className="space-y-2 text-gray-700">
             <p>
-              A simple note-taking app for iOS written in Swift and SwiftUI. Users can create,
-              modify, and delete notes as well as organize those notes with folders. Folders can be
-              given a custom icon to easily differentiate them. The app uses CoreData to handle the
-              storage and retrieval of notes and associated folders.
+              A simple note-taking app for iOS written in Swift and UIKit. Users can create, modify,
+              and delete notes as well as organize those notes with folders. Folders can be given a
+              custom icon to easily differentiate them. The app uses CoreData to handle the storage
+              and retrieval of notes and associated folders.
             </p>
 
             {/* Code Link */}
@@ -135,7 +135,7 @@ export default function Projects() {
               [
               <code>
                 <Link
-                  href="https://github.com/Arvonit/Commentarium"
+                  href="https://github.com/Arvonit/Schreiber"
                   className="text-blue-600 no-underline hover:underline"
                 >
                   Code
