@@ -1,13 +1,13 @@
-import Head from 'next/head';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
-export default function PageNotFound() {
+export const metadata: Metadata = {
+  title: 'Page not found'
+};
+
+export default function NotFound() {
   return (
-    <div className="flex h-screen">
-      <Head>
-        <title>Page not found - Arvind Kasiliya</title>
-        <meta name="description" content="My homepage on the internet" />
-      </Head>
+    <main className="flex h-screen">
       <div className="m-auto text-center">
         <h2 className="text-5xl md:text-6xl font-semibold mb-2">404</h2>
         <h3 className="text-xl md:text-2xl mb-4">Page not found.</h3>
@@ -17,6 +17,6 @@ export default function PageNotFound() {
           </button>
         </Link>
       </div>
-    </div>
+    </main>
   );
 }
