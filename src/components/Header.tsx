@@ -9,9 +9,11 @@ export default function Header() {
         <h2 className="text-3xl font-semibold mb-6">Arvind Kasiliya</h2>
 
         <div className="text-gray-700 space-y-4">
+          {/* Bio */}
           <p>
             Hey, I&apos;m Arvind! I&apos;m a senior at the University of Connecticut studying
-            Computer Science with a concentration in cybersecurity.
+            Computer Science with a concentration in cybersecurity. In my free time, I like to play
+            basketball, play the guitar, watch TV, and hang out.
           </p>
           <p>
             I currently work as an Undergraduate Research Assistant on{' '}
@@ -26,28 +28,6 @@ export default function Header() {
             dashboard and made enhancements to an internal web app portal in React. Going forward,
             I&apos;m looking for a full-time software engineering job starting Summer 2024.
           </p>
-
-          {/* <p>
-            I&apos;m currently working as an Undergraduate Research Assistant at the{' '}
-            <Link
-              href="https://infothreats.cse.uconn.edu"
-              className="text-blue-600 no-underline hover:underline"
-            >
-              RIET Lab
-            </Link>{' '}
-            under Dr. Shiri Dori-Hacohen and on the{' '}
-            <Link
-              href="https://eprint.iacr.org/2021/818.pdf"
-              className="text-blue-600 no-underline hover:underline"
-            >
-              CTng project
-            </Link>{' '}
-            under Dr. Amir Herzberg. My research interests include computer security, operating
-            systems, and information retrieval. Going forward, I&apos;m looking for a software
-            engineering internship for the upcoming summer.
-          </p> */}
-
-          {/* <p>My email address is arvind [at] kasiliya [dot] com.</p> */}
 
           {/* Links */}
           <div className="text-blue-600 flex flex-row space-x-4">
@@ -64,10 +44,11 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Picture */}
       <div className="basis-1/3 w-1/2 mb-8 md:mb-0 order-1 md:order-2">
         <Image
           src={me}
-          alt="Young Arvind typing away on a keyboard"
+          alt="Young me typing on a keyboard and smiling"
           className="rounded-lg"
           placeholder="blur"
         />

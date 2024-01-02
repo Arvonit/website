@@ -23,7 +23,7 @@ export default function Projects() {
             <p>
               I created this app as an honors project for my Data Structure and Algorithms class.
               Users can paint (fill out) a map of their Rubik&apos;s Cube and will receive the
-              necessary moves to solve their cube. It can solve a cube in under 3 seconds.
+              necessary moves to solve their cube. It can typically solve a cube in under a second.
             </p>
             <p>
               Under the hood, this solver uses a custom implementation of{' '}
@@ -55,7 +55,7 @@ export default function Projects() {
                 [
                 <code>
                   <Link
-                    href="https://rubik.kasiliya.com"
+                    href="https://rubik.arvind.me"
                     className="text-blue-600 no-underline hover:underline"
                   >
                     Website
@@ -72,11 +72,7 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
-          {/* <Link href="https://github.com/Arvonit/chat">
-              <a> */}
           <Image src={irc} alt="IRC client" placeholder="blur" className="rounded-sm" />
-          {/* </a>
-            </Link> */}
         </div>
 
         {/* Description */}
@@ -112,11 +108,7 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
-          {/* <Link href="https://github.com/Arvonit/Commentarium">
-              <a> */}
           <Image src={commentarium} alt="Schreiber" placeholder="blur" className="rounded-sm" />
-          {/* </a>
-            </Link> */}
         </div>
 
         {/* Description */}
