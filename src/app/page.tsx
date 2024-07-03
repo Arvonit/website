@@ -1,5 +1,5 @@
-import Header from '../components/Header';
-import Projects from '../components/Projects';
+import Header from '../components/header';
+import Projects from '../components/projects';
 
 export default function Home() {
   return (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import rubik from '../../public/projects/rubik.png';
 import irc from '../../public/projects/irc.png';
-import commentarium from '../../public/projects/commentarium.png';
+import schreiber from '../../public/projects/schreiber.png';
 
 export default function Projects() {
   return (
@@ -13,7 +13,12 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
-          <Image src={rubik} alt="Rubik's cube solver" placeholder="blur" className="rounded-sm" />
+          <Image
+            src={rubik}
+            alt="The homepage of my solver, showing a map of a Rubik's cube and a button to solve"
+            placeholder="blur"
+            className="rounded-sm"
+          />
         </div>
 
         {/* Description */}
@@ -29,8 +34,7 @@ export default function Projects() {
               Under the hood, this solver uses a custom implementation of{' '}
               <Link
                 href="http://kociemba.org/cube.htm"
-                className="text-blue-600 no-underline hover:underline"
-              >
+                className="text-blue-600 no-underline hover:underline">
                 Herbert Kociemba&apos;s Two-Phase algorithm
               </Link>
               , written in Python. The frontend, written in React, calls an endpoint, written using
@@ -40,28 +44,18 @@ export default function Projects() {
             {/* Links */}
             <div className="flex flex-row space-x-4">
               <p>
-                [
-                <code>
-                  <Link
-                    href="https://github.com/Arvonit/rubik"
-                    className="text-blue-600 no-underline hover:underline"
-                  >
-                    Code
-                  </Link>
-                </code>
-                ]
+                <Link
+                  href="https://github.com/Arvonit/rubik"
+                  className="text-blue-600 no-underline hover:underline">
+                  Code
+                </Link>
               </p>
               <p>
-                [
-                <code>
-                  <Link
-                    href="https://rubik.arvind.me"
-                    className="text-blue-600 no-underline hover:underline"
-                  >
-                    Website
-                  </Link>
-                </code>
-                ]
+                <Link
+                  href="https://rubik.arvind.me"
+                  className="text-blue-600 no-underline hover:underline">
+                  Website
+                </Link>
               </p>
             </div>
           </div>
@@ -72,33 +66,33 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
-          <Image src={irc} alt="IRC client" placeholder="blur" className="rounded-sm" />
+          <Image
+            src={irc}
+            alt="A text conversation between different users using the client of my IRC app"
+            placeholder="blur"
+            className="rounded-sm"
+          />
         </div>
 
         {/* Description */}
         <div className="basis-2/3">
-          <h4 className="text-lg font-medium mb-2">IRC Chat Client/Server</h4>
+          <h4 className="text-lg font-medium mb-2">IRC Chat App</h4>
           <div className="space-y-2 text-gray-700">
             <p>
-              A basic multi-threaded implementation of an IRC client and server, both written in C.
-              The server supports direct messages, distinct channels for specialized chat rooms, and
-              server-wide nicknames. The client implements these features, formats messages in a
-              easy-to-read manner, and will convert more advanced commands into properly-formatted
-              IRC messages (for servers that support them).
+              A multithreaded IRC client and server, written in C. The server supports direct
+              messages, distinct channels for specialized chat rooms, and server-wide nicknames. The
+              client implements these features, formats messages in a easy-to-read manner, and
+              converts more advanced commands into properly-formatted IRC messages (for servers that
+              support them).
             </p>
 
             {/* Code Link */}
             <p>
-              [
-              <code>
-                <Link
-                  href="https://github.com/Arvonit/irc"
-                  className="text-blue-600 no-underline hover:underline"
-                >
-                  Code
-                </Link>
-              </code>
-              ]
+              <Link
+                href="https://github.com/Arvonit/irc"
+                className="text-blue-600 no-underline hover:underline">
+                Code
+              </Link>
             </p>
           </div>
         </div>
@@ -108,7 +102,12 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
-          <Image src={commentarium} alt="Schreiber" placeholder="blur" className="rounded-sm" />
+          <Image
+            src={schreiber}
+            alt="The home screen of Schreiber"
+            placeholder="blur"
+            className="rounded-sm"
+          />
         </div>
 
         {/* Description */}
@@ -124,16 +123,11 @@ export default function Projects() {
 
             {/* Code Link */}
             <p>
-              [
-              <code>
-                <Link
-                  href="https://github.com/Arvonit/Schreiber"
-                  className="text-blue-600 no-underline hover:underline"
-                >
-                  Code
-                </Link>
-              </code>
-              ]
+              <Link
+                href="https://github.com/Arvonit/Schreiber"
+                className="text-blue-600 no-underline hover:underline">
+                Code
+              </Link>
             </p>
           </div>
         </div>
