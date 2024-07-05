@@ -9,10 +9,10 @@ export default function NotFound() {
   return (
     <main className="flex h-screen">
       <div className="m-auto text-center">
-        <h2 className="text-5xl md:text-6xl font-semibold mb-2">404</h2>
-        <h3 className="text-xl md:text-2xl mb-4">Page not found.</h3>
+        <h1 className="text-5xl md:text-6xl font-semibold mb-2 dark:text-white">404</h1>
+        <p className="text-xl md:text-2xl mb-4 text-gray-700 dark:text-gray-300">Page not found.</p>
         <Link href="/">
-          <button className="w-40 py-2 rounded-xl font-semibold text-white bg-blue-700 hover:bg-blue-600">
+          <button className="px-4 py-2 rounded-full font-semibold text-white bg-sky-700 hover:bg-sky-600 dark:bg-sky-500 dark:hover:bg-sky-400">
             Go back home -&gt;
           </button>
         </Link>
