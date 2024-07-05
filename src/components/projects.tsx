@@ -7,7 +7,7 @@ import schreiber from '../../public/projects/schreiber.png';
 export default function Projects() {
   return (
     <div className="mt-6 space-y-8">
-      <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+      <h2 className="text-2xl font-semibold mb-4 dark:text-white">Projects</h2>
 
       {/* Rubik's Cube Solver */}
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
@@ -17,14 +17,14 @@ export default function Projects() {
             src={rubik}
             alt="The homepage of my solver, showing a map of a Rubik's cube and a button to solve"
             placeholder="blur"
-            className="rounded-sm"
+            className="rounded-lg"
           />
         </div>
 
         {/* Description */}
         <div className="basis-2/3">
-          <h4 className="text-lg font-medium mb-2">Rubik&apos;s Cube Solver</h4>
-          <div className="space-y-2 text-gray-700">
+          <h4 className="text-lg font-medium mb-3 dark:text-white">Rubik&apos;s Cube Solver</h4>
+          <div className="prose dark:prose-invert">
             <p>
               I created this app as an honors project for my Data Structure and Algorithms class.
               Users can paint (fill out) a map of their Rubik&apos;s Cube and will receive the
@@ -32,9 +32,7 @@ export default function Projects() {
             </p>
             <p>
               Under the hood, this solver uses a custom implementation of{' '}
-              <Link
-                href="http://kociemba.org/cube.htm"
-                className="text-blue-600 no-underline hover:underline">
+              <Link href="http://kociemba.org/cube.htm">
                 Herbert Kociemba&apos;s Two-Phase algorithm
               </Link>
               , written in Python. The frontend, written in React, calls an endpoint, written using
@@ -43,20 +41,8 @@ export default function Projects() {
 
             {/* Links */}
             <div className="flex flex-row space-x-4">
-              <p>
-                <Link
-                  href="https://github.com/Arvonit/rubik"
-                  className="text-blue-600 no-underline hover:underline">
-                  Code
-                </Link>
-              </p>
-              <p>
-                <Link
-                  href="https://rubik.arvind.me"
-                  className="text-blue-600 no-underline hover:underline">
-                  Website
-                </Link>
-              </p>
+              <Link href="https://github.com/Arvonit/rubik">Code</Link>
+              <Link href="https://rubik.arvind.me">Website</Link>
             </div>
           </div>
         </div>
@@ -70,14 +56,14 @@ export default function Projects() {
             src={irc}
             alt="A text conversation between different users using the client of my IRC app"
             placeholder="blur"
-            className="rounded-sm"
+            className="rounded-lg"
           />
         </div>
 
         {/* Description */}
         <div className="basis-2/3">
-          <h4 className="text-lg font-medium mb-2">IRC Chat App</h4>
-          <div className="space-y-2 text-gray-700">
+          <h4 className="text-lg font-medium mb-3 dark:text-white">IRC Chat App</h4>
+          <div className="prose dark:prose-invert">
             <p>
               A multithreaded IRC client and server, written in C. The server supports direct
               messages, distinct channels for specialized chat rooms, and server-wide nicknames. The
@@ -87,13 +73,7 @@ export default function Projects() {
             </p>
 
             {/* Code Link */}
-            <p>
-              <Link
-                href="https://github.com/Arvonit/irc"
-                className="text-blue-600 no-underline hover:underline">
-                Code
-              </Link>
-            </p>
+            <Link href="https://github.com/Arvonit/irc">Code</Link>
           </div>
         </div>
       </div>
@@ -106,14 +86,14 @@ export default function Projects() {
             src={schreiber}
             alt="The home screen of Schreiber"
             placeholder="blur"
-            className="rounded-sm"
+            className="rounded-lg"
           />
         </div>
 
         {/* Description */}
         <div className="basis-2/3">
-          <h4 className="text-lg font-medium mb-2">Schreiber</h4>
-          <div className="space-y-2 text-gray-700">
+          <h4 className="text-lg font-medium mb-3 dark:text-white">Schreiber</h4>
+          <div className="prose dark:prose-invert">
             <p>
               A simple note-taking app for iOS written in Swift and UIKit. Users can create, modify,
               and delete notes as well as organize those notes with folders. Folders can be given a
@@ -122,13 +102,7 @@ export default function Projects() {
             </p>
 
             {/* Code Link */}
-            <p>
-              <Link
-                href="https://github.com/Arvonit/Schreiber"
-                className="text-blue-600 no-underline hover:underline">
-                Code
-              </Link>
-            </p>
+            <Link href="https://github.com/Arvonit/Schreiber">Code</Link>
           </div>
         </div>
       </div>
