@@ -3,6 +3,7 @@ import Image from 'next/image';
 import rubik from '../../public/projects/rubik.png';
 import irc from '../../public/projects/irc.png';
 import schreiber from '../../public/projects/schreiber.png';
+import ExternalLink from './external-link';
 
 export default function Projects() {
   return (
@@ -10,7 +11,7 @@ export default function Projects() {
       <h2 className="text-2xl font-semibold mb-4 dark:text-white">Projects</h2>
 
       {/* Rubik's Cube Solver */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
@@ -41,15 +42,23 @@ export default function Projects() {
 
             {/* Links */}
             <div className="flex flex-row space-x-4">
-              <Link href="https://github.com/Arvonit/rubik">Code</Link>
-              <Link href="https://rubik.arvind.me">Website</Link>
+              <Link
+                href="https://github.com/Arvonit/rubik"
+                className="inline-flex items-center space-x-1">
+                <span>Code</span>
+                <ExternalLink />
+              </Link>
+              <Link href="https://rubik.arvind.me" className="inline-flex items-center space-x-1">
+                <span>Website</span>
+                <ExternalLink />
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* IRC Client/Server */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
@@ -73,13 +82,33 @@ export default function Projects() {
             </p>
 
             {/* Code Link */}
-            <Link href="https://github.com/Arvonit/irc">Code</Link>
+            <Link
+              href="https://github.com/Arvonit/irc"
+              className="inline-flex items-center space-x-1">
+              <span>Code</span>
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#0284c7"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg> */}
+              <ExternalLink />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Schreiber */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center md:items-start">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
@@ -102,7 +131,12 @@ export default function Projects() {
             </p>
 
             {/* Code Link */}
-            <Link href="https://github.com/Arvonit/Schreiber">Code</Link>
+            <Link
+              href="https://github.com/Arvonit/Schreiber"
+              className="inline-flex items-center space-x-1">
+              <span>Code</span>
+              <ExternalLink />
+            </Link>
           </div>
         </div>
       </div>

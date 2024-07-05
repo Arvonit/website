@@ -13,7 +13,7 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            lineHeight: theme('lineHeight.normal'),
+            lineHeight: theme('lineHeight.relaxed'),
             a: {
               color: theme('colors.sky.600'),
               textDecoration: 'none',
