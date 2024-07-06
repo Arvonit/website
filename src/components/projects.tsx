@@ -11,7 +11,7 @@ export default function Projects() {
       <h2 className="text-2xl font-semibold mb-4 dark:text-white">Projects</h2>
 
       {/* Rubik's Cube Solver */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center shadow-sm border rounded-lg p-5 sm:p-8">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
@@ -58,7 +58,7 @@ export default function Projects() {
       </div>
 
       {/* IRC Client/Server */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center shadow-sm border rounded-lg p-5 sm:p-8">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
@@ -108,7 +108,7 @@ export default function Projects() {
       </div>
 
       {/* Schreiber */}
-      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center">
+      <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 space-y-8 md:space-y-0 items-center shadow-sm border rounded-lg p-5 sm:p-8">
         {/* Picture */}
         <div className="basis-1/3 w-1/2">
           <Image
