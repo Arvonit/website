@@ -40,6 +40,10 @@ export function getPostFromSlug(slug: string): Post {
 }
 
 export function getPostSlugs(): string[] {
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
   return fs
     .readdirSync(postsDirectory)
     .filter((file) => path.extname(file) === '.md')
