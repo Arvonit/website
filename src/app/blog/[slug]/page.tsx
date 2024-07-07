@@ -4,12 +4,19 @@ import Layout from '../../../components/layout';
 import { getAmericanDate, getPostFromSlug } from '../../../lib/utils';
 import rehypeSlug from 'rehype-slug';
 import Image, { ImageProps } from 'next/image';
-import rehypeImgSize from 'rehype-img-size';
 import rehypeImageSize from '../../../lib/rehype-image-size';
+import { Metadata } from 'next';
 
 interface Props {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = getPostFromSlug(params.slug);
+  return {
+    title: post.title
   };
 }
 
@@ -49,19 +56,6 @@ export default function BlogPost({ params }: Props) {
           }}
         />
       </article>
-
-      {/* <h1 className="text-3xl font-bold dark:text-white">{post.title}</h1>
-      <div className="mt-4 dark:text-white">
-        <time dateTime={post.date}>{getAmericanDate(new Date(post.date))}</time>
-      </div>
-      <div className="mt-6">
-        <article
-          className="prose dark:prose-invert max-w-none"
-          // dangerouslySetInnerHTML={{ __html: post.body }}
-        >
-          <MDXRemote source={post.body} />
-        </article>
-      </div> */}
     </Layout>
   );
 }

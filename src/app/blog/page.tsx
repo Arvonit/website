@@ -1,7 +1,12 @@
+import { Metadata } from 'next';
 import BlogPostCell from '../../components/blog-post-cell';
 import Header from '../../components/header';
 import Layout from '../../components/layout';
 import { getPosts } from '../../lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Blog'
+};
 
 export default function Blog() {
   const posts = getPosts();

@@ -1,13 +1,12 @@
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
-import Header from '../components/header';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Arvind Kasiliya',
+    template: '%s | Arvind Kasiliya',
     default: 'Arvind Kasiliya'
   },
   description: 'My homepage on the internet'
