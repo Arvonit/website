@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import me from '../../public/me-grad.jpeg';
-import ExternalLink from './external-link';
 
 export default function About() {
   return (
@@ -29,18 +28,6 @@ export default function About() {
             on <Link href="https://www.linkedin.com/in/arvindkasiliya">LinkedIn</Link> and{' '}
             <Link href="https://github.com/Arvonit">GitHub</Link>. I&apos;m always down to chat!
           </p>
-
-          {/* Links */}
-          {/* <div className="flex flex-row space-x-4">
-            <Link
-              href="https://www.linkedin.com/in/arvindkasiliya"
-              className="inline-flex items-center space-x-1">
-              <span>LinkedIn</span> <ExternalLink />
-            </Link>
-            <Link href="https://github.com/Arvonit" className="inline-flex items-center space-x-1">
-              <span>GitHub</span> <ExternalLink />
-            </Link>
-          </div> */}
         </div>
 
         {/* Picture */}

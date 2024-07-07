@@ -38,7 +38,6 @@ export default function BlogPost({ params }: Props) {
           source={post.body}
           options={{
             mdxOptions: {
-              // rehypePlugins: [rehypeSlug, [rehypeImgSize, { dir: 'public' }]],
               rehypePlugins: [rehypeSlug, [rehypeImageSize, { root: 'public' }]],
               remarkPlugins: [remarkGfm]
             }

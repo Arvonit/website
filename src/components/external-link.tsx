@@ -1,7 +1,3 @@
-interface Props {
-  color: string;
-}
-
 export default function ExternalLink() {
   return (
     <svg
