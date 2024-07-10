@@ -16,7 +16,10 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostFromSlug(params.slug);
   return {
-    title: post.title
+    title: post.title,
+    alternates: {
+      canonical: `/blog/${params.slug}`
+    }
   };
 }
 

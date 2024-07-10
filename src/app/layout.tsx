@@ -5,11 +5,18 @@ import { Metadata } from 'next';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.arvind.me'),
   title: {
     template: '%s | Arvind Kasiliya',
     default: 'Arvind Kasiliya'
   },
-  description: 'My homepage on the internet'
+  description: 'My homepage on the internet',
+  authors: {
+    name: 'Arvind Kasiliya'
+  },
+  alternates: {
+    canonical: '/'
+  }
 };
 
 interface Props {

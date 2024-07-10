@@ -4,7 +4,10 @@ import Layout from '../../components/layout';
 import { getPosts } from '../../lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Blog'
+  title: 'Blog',
+  alternates: {
+    canonical: '/blog'
+  }
 };
 
 export default function Blog() {
